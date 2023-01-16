@@ -25,14 +25,16 @@
         <div>
           <p>Top Left</p>
           <input
-            onkeyup="boxs.style.borderTopLeftRadius = this.value + 'px';"
+            id="topLeftInput"
+            onkeyup="box.style.borderTopLeftRadius = this.value + 'px';"
+            value="50"
           />
         </div>
         <div>
           <p>Top Right</p>
           <input
             onkeyup="
-            boxs.style.borderTopRightRadius = this.value + 'px';
+            box.style.borderTopRightRadius = this.value + 'px';
           "
           />
         </div>
@@ -43,7 +45,7 @@
           <p>Bottom Left</p>
           <input
             onkeyup="
-            boxs.style.borderBottomLeftRadius = this.value + 'px';
+            box.style.borderBottomLeftRadius = this.value + 'px';
           "
           />
         </div>
@@ -51,7 +53,7 @@
           <p>Bottom Right</p>
           <input
             onkeyup="
-            boxs.style.borderBottomRightRadius = this.value + 'px';
+            box.style.borderBottomRightRadius = this.value + 'px';
           "
           />
         </div>
@@ -59,7 +61,9 @@
     </div>
 
     <script>
-      const boxs = document.querySelector(".box");
+      const box = document.querySelector(".box");
+      const InputTst = document.getElementById("topLeftInput");
+      box.style.borderTopLeftRadius = InputTst.value + "px";
     </script>
   </body>
 </html>

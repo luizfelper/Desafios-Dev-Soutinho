@@ -14,6 +14,12 @@
   h1 {
     font-family: "Mulish", sans-serif;
   }
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+  }
   .container {
     width: 268px;
     margin: 0 auto;
@@ -25,7 +31,7 @@
     width: 268px;
     height: 268px;
     background: #ff9466;
-    border-radius: 50px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
   }
   .inputs-container {
     width: 100%;
