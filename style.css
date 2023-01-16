@@ -8,6 +8,8 @@
     background: black;
     color: whitesmoke;
     font-family: "Mulish", sans-serif;
+    height: 100vh;
+    display: flex;
   }
   h1 {
     font-family: "Mulish", sans-serif;
