@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  body {
+    background: black;
+    color: whitesmoke;
+    font-family: "Mulish", sans-serif;
+  }
+  h1 {
+    font-family: "Mulish", sans-serif;
+  }
+  .container {
+    width: 268px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .box {
+    width: 268px;
+    height: 268px;
+    background: #ff9466;
+    border-radius: 50px 0px 0px 0px;
+  }
+  .inputs-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px;
+  }
+  input {
+    border-radius: 6px;
+    border-style: none;
+    width: 100px;
+    height: 35px;
+  }
+  p {
+    margin-bottom: 5px;
+  }

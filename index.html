@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>#001 - CSS Preview: Border Radius</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="inputs-container">
+        <div>
+          <p>Top Left</p>
+          <input
+            onkeyup="boxs.style.borderTopLeftRadius = this.value + 'px';"
+          />
+        </div>
+        <div>
+          <p>Top Right</p>
+          <input
+            onkeyup="
+            boxs.style.borderTopRightRadius = this.value + 'px';
+          "
+          />
+        </div>
+      </div>
+      <div class="box"></div>
+      <div class="inputs-container">
+        <div>
+          <p>Bottom Left</p>
+          <input
+            onkeyup="
+            boxs.style.borderBottomLeftRadius = this.value + 'px';
+          "
+          />
+        </div>
+        <div>
+          <p>Bottom Right</p>
+          <input
+            onkeyup="
+            boxs.style.borderBottomRightRadius = this.value + 'px';
+          "
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const boxs = document.querySelector(".box");
+    </script>
+  </body>
+</html>
