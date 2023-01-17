@@ -27,6 +27,14 @@
       <div class="CSSProperties">
         <span>border-radius: </span
         ><span id="border-radius-values">0 0 0 0</span>
+        <span id="copyButton" onclick="handleCopy()"
+          ><img
+            width="18px"
+            height="18px"
+            alt="copyButton"
+            class="papa"
+            src="./assets/imgs/copy-svgrepo-com.svg"
+        /></span>
       </div>
       <div class="inputs-container">
         <div>
@@ -65,6 +73,8 @@
         borderBottomLeftRadius: 3,
       };
 
+      // navigator.clipboard.writeText(borderRadiusValues.value);
+
       allInputs.forEach((eachInput) => {
         eachInput.addEventListener("input", (e) => {
           // A cada entrada de dados do usuário (input) uma ação é disparada e captura o valor.
@@ -84,6 +94,12 @@
           valoresSeparados[posicaoDoInput] = valor + "px";
         }
         borderRadiusValues.innerText = valoresSeparados.join(" ");
+      };
+
+      const handleCopy = () => {
+        const copyContent = borderRadiusValues.textContent;
+        navigator.clipboard.writeText(copyContent);
+        alert("Copiado com sucesso!");
       };
     </script>
   </body>
