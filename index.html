@@ -55,7 +55,7 @@
     <div class="container">
       <div class="CSSProperties">
         <span>border-radius: </span
-        ><span id="border-radius-values">0 0 0 0</span>
+        ><span id="border-radius-values">0 0 0 0</span>;
         <span id="copyButton" onclick="handleCopy()"
           ><img
             width="18px"
@@ -125,7 +125,7 @@
 
       const handleCopy = () => {
         const copyContent = borderRadiusValues.textContent;
-        navigator.clipboard.writeText("border-radius: " + copyContent);
+        navigator.clipboard.writeText("border-radius: " + copyContent + ";");
         alert("Copiado com sucesso!");
       };
     </script>
