@@ -73,8 +73,6 @@
         borderBottomLeftRadius: 3,
       };
 
-      // navigator.clipboard.writeText(borderRadiusValues.value);
-
       allInputs.forEach((eachInput) => {
         eachInput.addEventListener("input", (e) => {
           // A cada entrada de dados do usuário (input) uma ação é disparada e captura o valor.
@@ -98,7 +96,7 @@
 
       const handleCopy = () => {
         const copyContent = borderRadiusValues.textContent;
-        navigator.clipboard.writeText(copyContent);
+        navigator.clipboard.writeText("border-radius: " + copyContent);
         alert("Copiado com sucesso!");
       };
     </script>
