@@ -8,10 +8,6 @@
     background: #222222;
     color: whitesmoke;
     font-family: "Mulish", sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
   input {
     border-radius: 6px;
@@ -27,14 +23,16 @@
     margin-bottom: 5px;
   }
   .container {
+    max-width: 286px;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .box {
-    width: 268px;
-    height: 268px;
+    width: 286px;
+    height: 286px;
     background: #ff9466;
     border-radius: 0px 0px 0px 0px;
   }
@@ -51,15 +49,16 @@
   }
   .header h1 {
     font-family: 'Ubuntu Mono', monospace;
-    font-size: 65px;
-    line-height: 65px;
+    font-size: 60px;
+    line-height: 60px;
     padding: 10px;
   }
 
   .CSSProperties {
     background: #626262;
-    border-radius: 6px;
+    width: 286px;
     padding: 16px;
+    border-radius: 6px;
   }
 
   #copyButton {
