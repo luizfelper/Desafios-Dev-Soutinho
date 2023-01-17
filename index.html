@@ -24,8 +24,9 @@
       <h1>[Previewer] <br />border-radius:</h1>
     </div>
     <div class="container">
-      <div class="copyProperties">
-        <span>border-radius: </span>
+      <div class="CSSProperties">
+        <span>border-radius: </span
+        ><span id="border-radius-values">0 0 0 0</span>
       </div>
       <div class="inputs-container">
         <div>
@@ -52,16 +53,38 @@
 
     <script>
       const box = document.querySelector(".box");
+      const borderRadiusValues = document.querySelector(
+        "#border-radius-values"
+      );
       const allInputs = document.querySelectorAll("input");
+
+      const valoresDasPosicoes = {
+        borderTopLeftRadius: 0,
+        borderTopRightRadius: 1,
+        borderBottomRightRadius: 2,
+        borderBottomLeftRadius: 3,
+      };
 
       allInputs.forEach((eachInput) => {
         eachInput.addEventListener("input", (e) => {
           // A cada entrada de dados do usuário (input) uma ação é disparada e captura o valor.
           let dadosDoInput = e.target.value;
           let idDoInput = e.target.id;
+          let posicaoDoInput = valoresDasPosicoes[idDoInput];
           box.style[idDoInput] = `${dadosDoInput}px`;
+          CSSProperties(posicaoDoInput, dadosDoInput);
         });
       });
+
+      const CSSProperties = (posicaoDoInput, valor) => {
+        const valoresSeparados = borderRadiusValues.innerText.split(" ");
+        if (valor <= 0) {
+          valoresSeparados[posicaoDoInput] = 0;
+        } else {
+          valoresSeparados[posicaoDoInput] = valor + "px";
+        }
+        borderRadiusValues.innerText = valoresSeparados.join(" ");
+      };
     </script>
   </body>
 </html>
