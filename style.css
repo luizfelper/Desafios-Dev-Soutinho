@@ -5,21 +5,26 @@
     text-decoration: none;
   }
   body {
-    background: black;
+    background: #222222;
     color: whitesmoke;
     font-family: "Mulish", sans-serif;
-    height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  h1 {
-    font-family: "Mulish", sans-serif;
-    text-align: center;
+  input {
+    border-radius: 6px;
+    border-style: none;
+    width: 100px;
+    height: 35px;
   }
   p {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
+    margin-bottom: 5px;
   }
   .container {
     width: 268px;
@@ -40,12 +45,19 @@
     justify-content: space-between;
     margin: 15px 0px;
   }
-  input {
-    border-radius: 6px;
-    border-style: none;
-    width: 100px;
-    height: 35px;
+  .header {
+    text-align: center;
+    width: 499px;
+    color: #FFE8D9;
+    margin: 66px 0;
   }
-  p {
-    margin-bottom: 5px;
+  .header h1 {
+    font-size: 72px;
+    line-height: 72px;
+  }
+
+  .copyProperties {
+    background: #626262;
+    border-radius: 6px;
+    padding: 16px;
   }

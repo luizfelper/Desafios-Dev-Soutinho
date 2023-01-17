@@ -20,23 +20,33 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
+    <div class="header">
+      <h1>[Previewer] <br />border-radius:</h1>
+    </div>
     <div class="container">
-      <div class="title"><h1>[Previwer] border-radius:</h1></div>
+      <div class="copyProperties"></div>
       <div class="inputs-container">
         <div>
           <p>Top Left</p>
           <input
             id="topLeftInput"
-            onkeyup="box.style.borderTopLeftRadius = this.value + 'px';"
+            onkeyup="
+              box.style.borderTopLeftRadius = this.value + 'px';
+              copyProperties.innerHTML = 'border-radius: ' + topLeftInput.value + 'px ' + '0 ' + '0 ' + '0 ';
+              "
             value="50"
+            type="number"
           />
         </div>
         <div>
           <p>Top Right</p>
           <input
+            id="topRightInput"
             onkeyup="
             box.style.borderTopRightRadius = this.value + 'px';
+            copyProperties.innerHTML = 'border-radius: ' + '0 ' + topRightInput.value + 'px ' + '0 ' + '0 ';
           "
+            type="number"
           />
         </div>
       </div>
@@ -45,17 +55,23 @@
         <div>
           <p>Bottom Left</p>
           <input
+            id="bottomLeftInput"
             onkeyup="
             box.style.borderBottomLeftRadius = this.value + 'px';
+            copyProperties.innerHTML = 'border-radius: ' + '0 ' + '0 ' + bottomLeftInput.value + 'px ' + '0 ';
           "
+            type="number"
           />
         </div>
         <div>
           <p>Bottom Right</p>
           <input
+            id="bottomRightInput"
             onkeyup="
             box.style.borderBottomRightRadius = this.value + 'px';
+            copyProperties.innerHTML = 'border-radius: ' + '0 ' + '0 ' + '0 ' + bottomRightInput.value + 'px';
           "
+            type="number"
           />
         </div>
       </div>
@@ -63,8 +79,16 @@
 
     <script>
       const box = document.querySelector(".box");
-      const InputTopLeft = document.getElementById("topLeftInput");
-      box.style.borderTopLeftRadius = InputTopLeft.value + "px";
+      const copyProperties = document.querySelector(".copyProperties");
+
+      const topLeftInput = document.getElementById("topLeftInput");
+      const topRightInput = document.getElementById("topRightInput");
+      const bottomLeftInput = document.getElementById("bottomLeftInput");
+      const bottomRightInput = document.getElementById("bottomRightInput");
+
+      box.style.borderTopLeftRadius = topLeftInput.value + "px";
+
+      copyProperties.innerHTML = "border-radius: 0 0 0 0;";
     </script>
   </body>
 </html>
